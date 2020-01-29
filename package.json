@@ -1,0 +1,35 @@
+{
+  "name": "@topl/most-signature-capture",
+  "version": "1.0.0",
+  "main": "dist/cjs/most-signature-capture.js",
+  "module": "dist/esm/most-signature-capture.js",
+  "browser": "dist/iife/most-signature-capture.js",
+  "typings": "dist/most-signature-capture.d.ts",
+  "license": "MIT",
+  "scripts": {
+    "test": "stable",
+    "build": "rollup -c rollup.config.js",
+    "prepublishOnly": "yarn test && yarn build && mv dist/cjs/most-signature-capture.d.ts* dist && rm dist/*/most-signature-capture.d.ts*"
+  },
+  "devDependencies": {
+    "prettier": "^1.18.2",
+    "rollup": "^1.29.0",
+    "typescript": "^3.7.0"
+  },
+  "nyc": {
+    "instrument": false
+  },
+  "prettier": {
+    "proseWrap": "never",
+    "singleQuote": false,
+    "trailingComma": "all"
+  },
+  "dependencies": {
+    "@most/core": "^1.5.0",
+    "@most/dom-event": "^2.2.0",
+    "@most/scheduler": "^1.2.3",
+    "@most/types": "^1.0.2",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0"
+  }
+}
