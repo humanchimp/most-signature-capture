@@ -27,14 +27,13 @@ const pen = canvas => {
   return switchLatest(merge(drag, drop));
 };
 
-const beginDrag = canvas => event => {
-  return startWith(
+const beginDrag = canvas => event =>
+  startWith(
     action("GRAB", event),
     map(e => action("DRAG", e), mousemove(canvas)),
   );
-};
 
-const endDrag = () => e => now(action("DROP", e));
+const endDrag = () => event => now(action("DROP", event));
 
 const ink = context => ({ action, event }) => {
   if (action === "GRAB") {
