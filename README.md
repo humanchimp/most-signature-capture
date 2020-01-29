@@ -1,6 +1,6 @@
-# 🐣most-signature-capture
+# 🖋️most-signature-capture
 
-rollup + typescript boilerplate
+just a trivial example of how one might implement signature capture using [@most](https://github.com/mostjs/core]
 
 ## license
 
